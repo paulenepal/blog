@@ -1,0 +1,28 @@
+<%= link_to 'Back to Articles', articles_path %></br>
+
+
+<h2 class="article-title"><%= @article.title %></h2>
+
+<table>
+    <tr>
+        <th> Author </th>
+        <td> <%= @article.author_name %> </td>
+    </tr>
+    <tr>
+        <th> Article </th>
+        <td> <%= @article.body %> </td>
+    </tr>
+    <tr>
+        <th> Created at </th>
+        <td> <%= @article.created_at %> </td>
+    </tr>
+    <tr>
+        <th> Update at </th>
+        <td> <%= @article.updated_at %> </td>
+    </tr>
+</table> <br>
+
+<div>
+    <%= link_to 'Edit', edit_article_path %>
+    <%= link_to 'Delete', delete_article_path %>
+</div>

@@ -13,3 +13,111 @@
  *= require_tree .
  *= require_self
  */
+
+ /* #8CB9BD
+#FEFBF6
+#ECB159
+#B67352 
+#43766C */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+
+.article-title {
+    color: #43766C;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #F9EFDB;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #ADBC9F;
+    color: #12372A;
+}
+
+tr {
+    background-color: #FEFBF6;
+}
+
+tr:hover {
+    background-color: #FFF6E9;
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions a {
+    margin-right: 5px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.actions a:hover {
+    font-weight: bold;
+}
+
+.button {
+    text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 20px;
+}
+
+.button:after {
+  content: "";
+  background-color: #DBE7C9;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 20px;
+}
+
+.button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 13px 50px 13px;
+  }
+}

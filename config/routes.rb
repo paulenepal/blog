@@ -7,4 +7,18 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get '/articles', to: 'articles#index', as: :articles #articles_path() => '/articles'
+
+  get 'articles/new', to: 'articles#new', as: :new_article
+  post 'articles', to: 'articles#create'
+
+  get 'articles/:id', to: 'articles#show', as: :article #article_path(2) => '/article/1' or article_path(Articles.)
+
+  get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
+  patch 'articles/:id', to: 'articles#update'
+
+  get 'articles/:id/delete', to: 'articles#delete', as: :delete_article
+  delete '/articles/:id', to: 'articles#destroy'
+
 end
+

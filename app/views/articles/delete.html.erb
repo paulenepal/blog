@@ -1,0 +1,16 @@
+<h2 class="article-title">Delete Article</h2>
+
+<%= form_for(@article, method: 'delete') do |form| %>
+
+    <p>Are you sure you want to permanently delete this article?</p>
+    <p> <%= "#{@article.title} by #{@article.author_name}" %> </p><br>
+
+    <div>
+        <%= form.submit "Delete Article" %>
+    </div>
+
+<% end %><br>
+
+<div class="button">
+    <%= link_to 'Back to Articles', articles_path %>
+</div>
